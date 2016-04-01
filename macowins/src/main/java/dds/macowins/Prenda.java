@@ -2,9 +2,9 @@ package dds.macowins;
 
 public abstract class Prenda 
 {
-	public boolean Internacional;
-	public double TasaImportacion;
-	public double ValorNegocio;
+	public boolean Internacional=false; //lo inicializo como falso
+	public double TasaImportacion = 1.30; //o el 30%
+	public double ValorNegocio = 100;  //esto habria que setearlo y no hardcodearlo aca pero no recuerdo como se le manda msj a la clase
 	
 	
 	public abstract double PrecioFinal();
@@ -13,10 +13,17 @@ public abstract class Prenda
 	{
 		if (Internacional)
 			return TasaImportacion;
-		return 0;
+		return 1;
 	}
 	protected void SetTasaImportacion(double valor)
 	{
 		TasaImportacion = valor;
 	}
+	public void setInternacional(boolean internacional) {
+		Internacional = internacional;
+	}
+	public void setValorNegocio(double valorNegocio) {
+		ValorNegocio = valorNegocio;
+	}
+	
 }
