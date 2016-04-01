@@ -13,6 +13,9 @@ public class SacoTest {
 	@Before
 	public void Initialize() {
 		
+		Prenda.TasaImportacion = 1.3; 
+		Prenda.ValorNegocio = 100;
+			
 		sacoNacional1 = new Saco();
 		sacoImportado1 = new Saco();
 	}
@@ -29,4 +32,5 @@ public class SacoTest {
 		sacoImportado1.setInternacional(true);
 		Assert.assertEquals(520.0, sacoImportado1.PrecioFinal()); // resultado esperado= (300+100)*30%
 	}
+	
 }

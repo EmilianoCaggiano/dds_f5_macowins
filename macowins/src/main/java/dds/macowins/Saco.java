@@ -13,7 +13,7 @@ public class Saco extends Prenda
 	public double PrecioFinal() 
 	{
 		// TODO Auto-generated method stub
-		return (ValorNegocio + PrecioBase )* PrecioImportacion() ;
+		return (ValorNegocio + PrecioBase )* PrecioImportacion() ; 
 	}
 	
 	@Override
