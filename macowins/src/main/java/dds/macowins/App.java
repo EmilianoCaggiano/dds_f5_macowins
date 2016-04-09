@@ -9,7 +9,7 @@ public class App
     {
         Macowins Mac = new Macowins();
         
-        Prenda pantalon = new Pantalon();
+        Prenda pantalon = new Pantalon(200);
         Venta venta1 = new Venta(new GregorianCalendar(2016, 02,02));
         venta1.Prenda = pantalon;
         venta1.Cantidad = 2;

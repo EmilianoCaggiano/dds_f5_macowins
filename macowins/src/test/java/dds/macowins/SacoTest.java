@@ -15,22 +15,23 @@ public class SacoTest {
 		
 		Prenda.TasaImportacion = 1.3; 
 		Prenda.ValorNegocio = 100;
-			
-		sacoNacional1 = new Saco();
-		sacoImportado1 = new Saco();
+		
+		
+		sacoNacional1 = new Saco(5, new Armani());
+		sacoImportado1 = new Saco(5, new Sarkany());
 	}
 	
 	@Test
 	public void SacosNacionalesNoDebenTenerTasaDeImportacion() {
 		
-		Assert.assertEquals(400.0, sacoNacional1.PrecioFinal());// resultado esperado= (300+100)*1
+		Assert.assertEquals(965.25, sacoNacional1.precioFinal());// resultado esperado= (300+100)*1
 		
 	}
 	
 	@Test
 	public void SacosImportadosDebenLlevarTasa() {
 		sacoImportado1.setInternacional(true);
-		Assert.assertEquals(520.0, sacoImportado1.PrecioFinal()); // resultado esperado= (300+100)*30%
+		Assert.assertEquals(643.5, sacoImportado1.precioFinal()); // resultado esperado= (300+100)*30%
 	}
 	
 }

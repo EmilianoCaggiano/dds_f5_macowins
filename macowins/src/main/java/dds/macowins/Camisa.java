@@ -16,11 +16,6 @@ public class Camisa extends Prenda
 		return PrecioBase;
 	}
 
-	@Override
-	public double PrecioFinal() {
-		// TODO Auto-generated method stub
-		return ValorNegocio + PrecioBase + PrecioImportacion() ;
-	}
 
 }
 

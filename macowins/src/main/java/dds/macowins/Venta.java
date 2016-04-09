@@ -16,7 +16,7 @@ public class Venta {
 	
 	public double ImporteTotal()
 	{
-		return Prenda.PrecioFinal() * Cantidad;
+		return Prenda.precioFinal() * Cantidad;
 	}
 	
 	

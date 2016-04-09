@@ -4,17 +4,13 @@ public class Saco extends Prenda
 {
 	protected double PrecioBase;
 	
-	public Saco()
+	public Saco(double cantidadDeBotones, Marca marca)
 	{
-		PrecioBase = 300;
+		PrecioBase = 300 + 10*cantidadDeBotones;
+		this.marca = marca;
 	}
 	
-	@Override
-	public double PrecioFinal() 
-	{
-		// TODO Auto-generated method stub
-		return (ValorNegocio + PrecioBase )* PrecioImportacion() ; 
-	}
+	
 	
 	@Override
 	protected double PrecioBase()
